@@ -5935,8 +5935,6 @@ border: 1px solid #34c38f;
   /* display: none; */
 }
 .apexcharts-xcrosshairs {
-  /* fill: #f5e500ab; */
-
   height: 85%;
   transform: translateY(-30px);
   rx: 10;
