@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trading</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#000" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta content="#" name="description" />
+    <meta content="#" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <!-- owl.carousel css -->
+    <!-- <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css"> -->
+    <link rel="stylesheet" href="assets/css/style_carousel.css" />
+    <!-- Bootstrap Css -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      id="bootstrap-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+
+    <link
+      href="assets/css/app.min.css"
+      id="app-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- App js -->
+    <script src="assets/js/plugin.js"></script>
+  </head>
+
+  <body data-sidebar="dark" data-sidebar-size="small" class="gb-main">
+    <div id="preloader">
+      <img src="" alt="" height="22" />
+      <div id="loader"></div>
+    </div>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      <header id="page-topbar">
+        <div class="navbar-header bg-dark">
+          <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+              <a href="index.html" class="logo logo-dark">
+                <span class="logo-sm">
+                  <img src="" alt="" height="22" />
+                </span>
+                <span class="logo-lg">
+                  <img src="" alt="" height="17" />
+                </span>
+              </a>
+
+              <a href="index.html" class="logo logo-light">
+                <span class="logo-sm">
+                  <img src="" alt="" height="22" />
+                </span>
+                <span class="logo-lg">
+                  <img src="" alt="" height="19" />
+                </span>
+              </a>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-sm px-3 font-size-16 header-item waves-effect text-warning"
+              id="vertical-menu-btn"
+            >
+              <i class="fa fa-fw fa-bars"></i>
+            </button>
+
+            <!-- App Search-->
+            <form class="app-search">
+              <div class="position-relative">
+                <input
+                  type="text"
+                  class="form-control"
+                  style="min-width: 190px; font-size: 10px"
+                  id="had_ref_link"
+                  value="https://domain.ai"
+                  readonly
+                />
+                <a id="had_ref_button" href="#"
+                  ><span class="bx bx-copy text-warning"></span
+                ></a>
+              </div>
+            </form>
+          </div>
+
+          <div class="d-flex">
+            <!--Deposits Header-->
+            <div
+              class="border-yellow rounded py-1 d-none d-xl-inline-block px-2"
+            >
+              <div
+                class="d-flex flex-column px-2 d-none d-xl-inline-block border-end"
+              >
+                <p class="card-title-desc mb-0">Main Balance</p>
+                <h6 class="fw-semibold mb-0 mt-1 text-white">
+                  <img
+                    src="assets/images/crypto/usdt.svg"
+                    alt="USDT Icon"
+                    class="svg-icon"
+                  />8 689.55 USDT
+                </h6>
+              </div>
+
+              <div class="d-flex flex-column px-2 d-none d-xl-inline-block">
+                <p class="card-title-desc mb-0">Bitcoin Balance</p>
+                <h6 class="fw-semibold mb-0 mt-1 text-white">
+                  <img
+                    src="assets/images/crypto/bitcoin.svg"
+                    alt="USDT Icon"
+                    class="svg-icon"
+                  />0.012777 BTC
+                </h6>
+              </div>
+
+              <div
+                class="d-flex flex-column px-2 d-none d-xl-inline-block border-start"
+              >
+                <p class="card-title-desc mb-0">Ethereum Balance</p>
+                <h6 class="fw-semibold mb-0 mt-1 text-white">
+                  <img
+                    src="assets/images/crypto/ethereum.svg"
+                    alt="USDT Icon"
+                    class="svg-icon"
+                  />2.021789 ETH
+                </h6>
+              </div>
+            </div>
+            <!--Deposits Header END-->
+          </div>
+
+          <div class="d-flex">
+            <!--Language switch-->
+            <div class="dropdown d-inline-block">
+              <button
+                style="width: 50px"
+                type="button"
+                class="btn header-item waves-effect"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  id="header-lang-img"
+                  src="assets/images/flags/us.jpg"
+                  alt="Header Language"
+                  height="16"
+                />
+              </button>
+              <div class="dropdown-menu dropdown-menu-end">
+                <!-- item-->
+                <a
+                  href="javascript:void(0);"
+                  class="dropdown-item notify-item language"
+                  data-lang="en"
+                >
+                  <img
+                    src="assets/images/flags/us.jpg"
+                    alt="user-image"
+                    class="me-1"
+                    height="12"
+                  />
+                  <span class="align-middle">English</span>
+                </a>
+                <!-- item-->
+                <a
+                  href="javascript:void(0);"
+                  class="dropdown-item notify-item language"
+                  data-lang="sp"
+                >
+                  <img
+                    src="assets/images/flags/spain.jpg"
+                    alt="user-image"
+                    class="me-1"
+                    height="12"
+                  />
+                  <span class="align-middle">Spanish</span>
+                </a>
+
+                <!-- item-->
+                <a
+                  href="javascript:void(0);"
+                  class="dropdown-item notify-item language"
+                  data-lang="gr"
+                >
+                  <img
+                    src="assets/images/flags/germany.jpg"
+                    alt="user-image"
+                    class="me-1"
+                    height="12"
+                  />
+                  <span class="align-middle">German</span>
+                </a>
+
+                <!-- item-->
+                <a
+                  href="javascript:void(0);"
+                  class="dropdown-item notify-item language"
+                  data-lang="it"
+                >
+                  <img
+                    src="assets/images/flags/italy.jpg"
+                    alt="user-image"
+                    class="me-1"
+                    height="12"
+                  />
+                  <span class="align-middle">Italian</span>
+                </a>
+
+                <!-- item-->
+                <a
+                  href="javascript:void(0);"
+                  class="dropdown-item notify-item language"
+                  data-lang="ru"
+                >
+                  <img
+                    src="assets/images/flags/russia.jpg"
+                    alt="user-image"
+                    class="me-1"
+                    height="12"
+                  />
+                  <span class="align-middle">Russian</span>
+                </a>
+              </div>
+            </div>
+            <!--Language switch-->
+
+            <!--Header notifications-->
+            <div class="dropdown d-inline-block">
+              <button
+                style="width: 50px"
+                type="button"
+                class="btn header-item noti-icon waves-effect"
+                id="page-header-notifications-dropdown"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="assets/images/bell.svg"
+                  alt="Bell Icon"
+                  class="bx-tada svg-icon-bell"
+                />
+                <span class="pulse"></span>
+              </button>
+              <div
+                class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                aria-labelledby="page-header-notifications-dropdown"
+              >
+                <div class="p-3">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <h6 class="m-0 text-white" key="t-notifications">
+                        Notifications
+                      </h6>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#!" class="small text-warning" key="t-view-all">
+                        View All</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div data-simplebar style="max-height: 230px">
+                  <a
+                    href="javascript: void(0);"
+                    class="text-reset notification-item"
+                  >
+                    <div class="d-flex py-3">
+                      <div class="avatar-xs me-3">
+                        <span
+                          class="avatar-title bg-dark rounded-circle box-glow"
+                        >
+                          <img
+                            src="assets/images/deposit.svg"
+                            alt="Pending"
+                            class=""
+                          />
+                        </span>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h6 class="mb-0" key="t-your-order">
+                          You have created a new deposit
+                        </h6>
+                        <div class="font-size-12 text-muted">
+                          <div
+                            class="badge bg-success text-dark text-wrap py-1 px-3"
+                          >
+                            + 10000<sup> USDT</sup>
+                          </div>
+                          <p class="mb-0">
+                            <i class="mdi mdi-clock-outline"></i>
+                            <span key="t-min-ago">3 min ago</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="javascript: void(0);"
+                    class="text-reset notification-item"
+                  >
+                    <div class="d-flex">
+                      <div class="avatar-xs me-3">
+                        <span
+                          class="avatar-title bg-dark rounded-circle box-glow"
+                        >
+                          <img
+                            src="assets/images/withdraw.svg"
+                            alt="Withdraw"
+                            class=""
+                          />
+                        </span>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h6 class="mb-0" key="t-your-order">
+                          Withdraw from deposit
+                        </h6>
+                        <div class="font-size-12 text-muted">
+                          <div
+                            class="badge bg-danger text-white text-wrap py-1 px-3"
+                          >
+                            - 10000<sup> USDT</sup>
+                          </div>
+                          <p class="mb-0">
+                            <i class="mdi mdi-clock-outline"></i>
+                            <span key="t-min-ago">6 min ago</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="javascript: void(0);"
+                    class="text-reset notification-item"
+                  >
+                    <div class="d-flex">
+                      <div class="avatar-xs me-3">
+                        <span
+                          class="avatar-title bg-warning rounded-circle font-size-16 box-glow"
+                        >
+                          <i class="bx bx-support"></i>
+                        </span>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h6 class="mb-1">Support</h6>
+                        <div class="font-size-12 text-muted">
+                          <div
+                            class="badge bg-warning text-dark text-wrap py-1 px-3"
+                          >
+                            You've got a message
+                          </div>
+                          <p class="mb-0">
+                            <i class="mdi mdi-clock-outline"></i>
+                            <span key="t-hours-ago">1 hours ago</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="javascript: void(0);"
+                    class="text-reset notification-item"
+                  >
+                    <div class="d-flex">
+                      <div class="avatar-xs me-3">
+                        <span
+                          class="avatar-title bg-dark rounded-circle box-glow"
+                        >
+                          <img
+                            src="assets/images/deposit.svg"
+                            alt="Pending"
+                            class=""
+                          />
+                        </span>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h6 class="mb-1" key="t-shipped">
+                          Top up your account
+                        </h6>
+                        <div class="font-size-12 text-muted">
+                          <div
+                            class="badge bg-success text-dark text-wrap py-1 px-3"
+                          >
+                            + 10000<sup> USDT</sup>
+                          </div>
+                          <p class="mb-0">
+                            <i class="mdi mdi-clock-outline"></i>
+                            <span key="t-min-ago">3 min ago</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="javascript: void(0);"
+                    class="text-reset notification-item"
+                  >
+                    <div class="d-flex">
+                      <div class="avatar-xs me-3">
+                        <span
+                          class="avatar-title bg-dark rounded-circle box-glow"
+                        >
+                          <img
+                            src="assets/images/withdraw.svg"
+                            alt="Withdraw"
+                            class=""
+                          />
+                        </span>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h6 class="mb-1">Withdrawal from account</h6>
+                        <div class="font-size-12 text-muted">
+                          <div
+                            class="badge bg-danger text-white text-wrap py-1 px-3"
+                          >
+                            - 10000<sup> USDT</sup>
+                          </div>
+                          <p class="mb-0">
+                            <i class="mdi mdi-clock-outline"></i>
+                            <span key="t-hours-ago">1 hours ago</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--Header notofications-->
+
+            <div class="dropdown d-inline-block">
+              <button
+                type="button"
+                class="btn header-item waves-effect header-item-mob"
+                id="page-header-user-dropdown"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  class="rounded-circle header-profile-user"
+                  src="assets/images/users/avatar-1.jpg"
+                  alt="Header Avatar"
+                />
+                <span
+                  class="d-none d-xl-inline-block ms-1"
+                  key="t-henry"
+                ></span>
+                <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end">
+                <!-- item-->
+                <a class="dropdown-item" href="#"
+                  ><i class="bx bx-user font-size-16 align-middle me-1"></i>
+                  <span key="t-profile">Profile</span></a
+                >
+                <a class="dropdown-item" href="#"
+                  ><i class="bx bx-wallet font-size-16 align-middle me-1"></i>
+                  <span key="t-my-wallet">My Wallet</span></a
+                >
+
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-danger" href="#"
+                  ><i
+                    class="bx bx-power-off font-size-16 align-middle me-1 text-danger"
+                  ></i>
+                  <span key="t-logout">Logout</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ========== Left Sidebar Start ========== -->
+      <div class="vertical-menu">
+        <div data-simplebar class="h-100">
+          <!--- Sidemenu -->
+          <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu list-unstyled" id="side-menu">
+              <li>
+                <a href="#" class="waves-effect">
+                  <i class="bx bxs-home"></i>
+                  <span key="t-chat">Dashboard</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Sidebar -->
+        </div>
+      </div>
+      <!-- Left Sidebar End -->
+
+      <!-- ============================================================== -->
+      <!-- Start right Content here -->
+      <!-- ============================================================== -->
+      <div class="main-content">
+        <div class="page-content">
+          <div class="container-fluid">
+            <!-- start page title -->
+            <div class="row">
+              <div class="col-12">
+                <div
+                  class="page-title-box d-flex align-items-center justify-content-between"
+                >
+                  <h4 class="mb-0 font-size-18 text-white">Trading</h4>
+
+                  <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                      <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                      <li class="breadcrumb-item active">Trading</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+              <!--Income statistics-->
+              <div class="col-lg-6">
+                <div
+                  class="card bg-dark border-yellow all-h-block bg-table-overlay"
+                >
+                  <div class="card-body">
+                    <!--Title-->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h4 class="mb-sm-0 font-size-18 text-white">
+                        Income statistics
+                      </h4>
+                      <h4 class="mb-sm-0 font-size-18 text-white">
+                        Chart<i class="bx bx-trending-up ms-2"></i>
+                      </h4>
+                    </div>
+                    <!--Title END-->
+                    <!--Chart USDT/BTC/ETH-->
+                    <div
+                      class="p-0"
+                      id="line_chart_dashed"
+                      data-colors='["--bs-success", "--bs-info", "--bs-warning"]'
+                      class="apex-charts"
+                      dir="ltr"
+                    ></div>
+                    <!--Chart USDT/BTC/ETH END-->
+                  </div>
+                </div>
+              </div>
+              <!--Income statistics END-->
+
+              <!--Trading statistics from previous months-->
+              <div class="col-lg-6">
+                <div
+                  class="card bg-dark border-yellow all-h-block bg-table-overlay"
+                >
+                  <div class="card-body">
+                    <!--Title-->
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <h4 class="mb-sm-0 font-size-18 text-white">
+                        Trading statistics from previous months
+                      </h4>
+                      <h4 class="mb-sm-0 font-size-18 text-white">
+                        Chart<i class="bx bx-trending-up ms-2"></i>
+                      </h4>
+                    </div>
+                    <!--Title END-->
+                    <!--Chart USDT/BTC/ETH-->
+
+                    <div
+                      class="p-0"
+                      id="column_chart"
+                      data-colors='["--bs-success","--bs-warning","--bs-primary"]'
+                      class="apex-charts"
+                      dir="ltr"
+                    ></div>
+                    <!--Chart USDT/BTC/ETH END-->
+                  </div>
+                </div>
+              </div>
+              <!--Trading statistics from previous months END-->
+            </div>
+          </div>
+          <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">Dashboard</div>
+              <div class="col-sm-6">
+                <div class="text-sm-end d-none d-sm-block">
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+
+    <!-- apexcharts -->
+    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- apexcharts init -->
+    <script src="assets/js/pages/apexcharts.init.js"></script>
+
+    <!-- crypto dash init js -->
+    <script src="assets/js/pages/crypto-dashboard.init.js"></script>
+    <script src="assets/js/preloader.js"></script>
+
+    <!--copy ref link-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Функция для копирования текста в буфер обмена
+        function copyToClipboard(elementId) {
+          var copyText = document.getElementById(elementId);
+          copyText.select();
+          document.execCommand("copy");
+        }
+
+        // Функция для отображения всплывающего уведомления
+        function showCopiedAlert() {
+          var toast = new bootstrap.Toast(
+            document.getElementById("notification")
+          );
+          toast.show();
+          setTimeout(function () {
+            toast.hide(); // Скрыть уведомление через 10 секунд
+          }, 10000);
+        }
+
+        // Обработчик события для кнопки copy_left_leg
+        document
+          .getElementById("had_ref_button")
+          .addEventListener("click", function () {
+            copyToClipboard("had_ref_link");
+            showCopiedAlert();
+          });
+
+        // Обработчик события для кнопки copy_left_leg
+        document
+          .getElementById("block1_ref_button")
+          .addEventListener("click", function () {
+            copyToClipboard("had_ref_link");
+            showCopiedAlert();
+          });
+
+        // Обработчик события для кнопки copy_left_leg
+        document
+          .getElementById("block2_ref_button")
+          .addEventListener("click", function () {
+            copyToClipboard("block2_ref_link");
+            showCopiedAlert();
+          });
+
+        // Обработчик события для кнопки copy_left_leg
+        document
+          .getElementById("block2_2_ref_button")
+          .addEventListener("click", function () {
+            copyToClipboard("block2_ref_link");
+            showCopiedAlert();
+          });
+      });
+    </script>
+
+    <!-- owl.carousel js -->
+    <script src="assets/libs/owl.carousel/owl.carousel.min.js"></script>
+    <script>
+      $("#myteam-carousel-1,#myteam-carousel-2").owlCarousel({
+        items: 1,
+        loop: 0,
+        margin: 0,
+        nav: 1,
+        navText: [
+          "<i class='bx bx-chevron-left fs-4 mt-1'></i>",
+          "<i class='bx bx-chevron-right fs-4 mt-1'></i>",
+        ],
+        dots: !1,
+        responsive: {
+          576: {
+            items: 1,
+          },
+          768: {
+            items: 3,
+          },
+          992: {
+            items: 4,
+          },
+        },
+      });
+    </script>
+
+    <!--alert-->
+    <div class="position-fixed top-0 end-0 p-3" style="margin-top: 80px">
+      <div
+        id="notification"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        style="z-index: 99999"
+      >
+        <div class="toast-header">
+          <strong class="me-auto"
+            ><i class="bx bx-bell bx-tada me-2"></i>Notification</strong
+          >
+          <small class="text-muted">just now</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="pt-0 pb-2 px-3">
+          <p class="m-0 text-success">
+            <i class="mdi mdi-check-all me-2"></i>Referral link copied!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--alert END-->
+  </body>
+</html>

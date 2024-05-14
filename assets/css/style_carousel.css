@@ -1,0 +1,79 @@
+#globe {
+    position: fixed!important;
+    top: 300px!important;
+    right: 10%!important;
+    transform: translateY(-50%);
+    max-width: none;
+	opacity: 30%;
+}
+@media (max-width: 768px) {
+  #globe {
+    position: fixed!important;
+    top: 22%!important;
+    right: -20%!important;
+    transform: translateY(-50%);
+    width: 88vw;
+    max-width: none;
+	opacity: 30%;
+}
+}
+
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-start,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+   transition-duration: 10s;
+}
+/* Для мобильных устройств с шириной экрана менее 768px (можете настроить значение по своему усмотрению) */
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-start,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: block;
+		 transition-duration: 1s;
+    }
+}
+.carousel-item-h{
+	height:90%;
+}
+.carousel-container{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+/* display 4 */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-right.active,
+  .carousel-inner .carousel-item-next,
+  .carousel-item-next:not(.carousel-item-start) {
+    transform: translateX(25%) !important;
+  }
+
+  .carousel-inner .carousel-item-left.active,
+  .carousel-item-prev:not(.carousel-item-end),
+  .active.carousel-item-start,
+  .carousel-item-prev:not(.carousel-item-end) {
+    transform: translateX(-25%) !important;
+  }
+
+  .carousel-item-next.carousel-item-start, .active.carousel-item-end {
+    transform: translateX(0) !important;
+  }
+
+  .carousel-inner .carousel-item-prev,
+  .carousel-item-prev:not(.carousel-item-end) {
+    transform: translateX(-25%) !important;
+  }
+}
