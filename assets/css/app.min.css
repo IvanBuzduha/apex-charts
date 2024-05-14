@@ -5925,8 +5925,9 @@ border: 1px solid #34c38f;
   display: none;
 }
 .apexcharts-tooltip.apexcharts-theme-light {
+  --filter: blur(15px);
+  backdrop-filter: var(--filter);
   border: 0px solid #e3e3e300;
-  background: rgba(255, 255, 255, 0);
   color: #fff;
   box-shadow: 2px 2px 6px -4px #9990;
 }
