@@ -32,92 +32,92 @@ function getChartColorsArray(e) {
 }
 
 var options, chart;
-// ,
-//   donutChartColors = getChartColorsArray("donut_chart");
 
-// donutChartColors &&
-//   ((options = {
-//     chart: {
-//       height: 155,
+donutChartColors = getChartColorsArray("donut_chart");
 
-//       type: "donut",
-//     },
+donutChartColors &&
+  ((options = {
+    chart: {
+      height: 155,
 
-//     plotOptions: {
-//       pie: {
-//         donut: {
-//           size: "90%",
-//         },
-//       },
-//     },
+      type: "donut",
+    },
 
-//     series: [15, 15, 35, 35],
+    plotOptions: {
+      pie: {
+        donut: {
+          size: "90%",
+        },
+      },
+    },
 
-//     labels: [
-//       "Bitcoin Deposit",
-//       "Ethereum Deposit",
-//       "Bonus Deposit",
-//       "Main Deposit",
-//     ],
+    series: [15, 15, 35, 35],
 
-//     colors: donutChartColors,
+    labels: [
+      "Bitcoin Deposit",
+      "Ethereum Deposit",
+      "Bonus Deposit",
+      "Main Deposit",
+    ],
 
-//     dataLabels: {
-//       enabled: false, // Убираем data labels
-//     },
+    colors: donutChartColors,
 
-//     stroke: {
-//       show: false,
+    dataLabels: {
+      enabled: false, // Убираем data labels
+    },
 
-//       width: 5,
+    stroke: {
+      show: false,
 
-//       colors: ["#666"],
-//     },
+      width: 5,
 
-//     legend: {
-//       show: 0,
+      colors: ["#666"],
+    },
 
-//       position: "bottom",
+    legend: {
+      show: 0,
 
-//       horizontalAlign: "center",
+      position: "bottom",
 
-//       verticalAlign: "middle",
+      horizontalAlign: "center",
 
-//       floating: 0,
+      verticalAlign: "middle",
 
-//       fontSize: "14px",
+      floating: 0,
 
-//       offsetX: 0,
-//     },
+      fontSize: "14px",
 
-//     responsive: [
-//       {
-//         breakpoint: 100,
+      offsetX: 0,
+    },
 
-//         options: {
-//           chart: {
-//             height: 240,
-//           },
+    responsive: [
+      {
+        breakpoint: 100,
 
-//           legend: {
-//             show: !1,
-//           },
-//         },
-//       },
-//     ],
+        options: {
+          chart: {
+            height: 240,
+          },
 
-//     tooltip: {
-//       y: {
-//         formatter: function (val) {
-//           return val + "%";
-//         },
-//       },
-//     },
-//   }),
-//   (chart = new ApexCharts(
-//     document.querySelector("#donut_chart"),
-//     options
-//   )).render());
+          legend: {
+            show: !1,
+          },
+        },
+      },
+    ],
+
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return val + "%";
+        },
+      },
+    },
+  }),
+  (chart = new ApexCharts(
+    document.querySelector("#donut_chart"),
+    options
+  )).render());
 
 var lineChartdashedColors = getChartColorsArray("line_chart_dashed");
 
@@ -206,21 +206,21 @@ lineChartdashedColors &&
 
     series: [
       {
-        name: "USDT /",
+        name: "USDT",
         data: [
           45000, 52000, 38000, 24000, 33000, 26000, 21000, 20000, 6000, 8000,
           15000, 10000,
         ],
       },
       {
-        name: "Ethereum /",
+        name: "Ethereum",
         data: [
           36000, 42000, 60000, 42000, 13000, 18000, 29000, 37000, 36000, 51000,
           32000, 35000,
         ],
       },
       {
-        name: "Bitcoin /",
+        name: "Bitcoin",
         data: [
           89000, 56000, 74000, 98000, 72000, 38000, 64000, 46000, 84000, 58000,
           46000, 49000,
@@ -314,18 +314,13 @@ columnChartColors &&
       offsetX: 0,
     },
     series: [
+      { car: "USDT", name: "USDT", data: [46, 57, 59, 54, 62, 58, 64, 60, 66] },
       {
-        name: "USDT",
-        data: [46, 57, 59, 54, 62, 58, 64, 60, 66],
-      },
-      {
+        car: "USDT",
         name: "BTC",
         data: [74, 83, 102, 97, 86, 106, 93, 114, 94],
       },
-      {
-        name: "ETH",
-        data: [37, 42, 38, 26, 47, 50, 54, 55, 43],
-      },
+      { car: "USDT", name: "ETH", data: [37, 42, 38, 26, 47, 50, 54, 55, 43] },
     ],
     colors: columnChartColors,
     fill: {
