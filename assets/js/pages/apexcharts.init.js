@@ -151,12 +151,6 @@ lineChartdashedColors &&
           show: true,
         },
       },
-
-      // grid: {
-      //   borderColor: "#e0e0e0", // Цвет сетки
-
-      //   strokeDashArray: 3, // Длина пунктирной линии
-      // },
     },
     colors: lineChartdashedColors,
     fill: {
@@ -168,23 +162,7 @@ lineChartdashedColors &&
         stops: [0, 90, 30],
       },
     },
-    // colors: ["#bc00f9", "#00E396", "#e7860e"],
-    // fill: {
-    //   type: "gradient",
-    //   gradient: {
-    //     opacityFrom: 0.6,
-    //     opacityTo: 0.8,
-    //   },
-    // },
-    // fill: {
-    //   type: "gradient",
-    //   gradient: {
-    //     shadeIntensity: 1,
-    //     opacityFrom: 0.7,
-    //     opacityTo: 0.9,
-    //     stops: [0, 90, 100],
-    //   },
-    // },
+
     dataLabels: {
       enabled: false,
     },
@@ -257,20 +235,14 @@ lineChartdashedColors &&
         show: false,
       },
     },
-    // tooltip: {
-    //   y: [
-    //     {
-    //       title: {
-    //         formatter: function (e) {
-    //           return e;
-    //         },
-    //       },
-    //     },
-    //   ],
-    // },
     tooltip: {
       shared: true,
       intersect: false,
+      y: {
+        formatter: function (val) {
+          return val + " USDT";
+        },
+      },
     },
   }),
   (chart = new ApexCharts(
@@ -368,7 +340,6 @@ columnChartColors &&
     // },
     grid: {
       show: true,
-      // borderColor: "#e7054c",
       strokeDashArray: 10,
       position: "back",
       padding: {
@@ -385,7 +356,16 @@ columnChartColors &&
       },
     },
 
-    tooltip: { enabled: true, shared: true, intersect: false },
+    tooltip: {
+      enabled: true,
+      shared: true,
+      intersect: false,
+      y: {
+        formatter: function (val) {
+          return val + " USDT";
+        },
+      },
+    },
   }),
   (chart = new ApexCharts(
     document.querySelector("#column_chart"),
