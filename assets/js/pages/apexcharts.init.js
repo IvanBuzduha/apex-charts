@@ -360,11 +360,11 @@ columnChartColors &&
       enabled: true,
       shared: true,
       intersect: false,
-      y: {
-        formatter: function (val) {
-          return val + " USDT";
-        },
-      },
+      // y: {
+      //   formatter: function (val) {
+      //     return val + " USDT";
+      //   },
+      // },
     },
   }),
   (chart = new ApexCharts(
